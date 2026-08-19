@@ -7,7 +7,7 @@ responses across a battery of social-perception and social-cognition experiments
 and produce the manuscript's supplementary tables and figures.
 
 > The fROIs themselves (group-constrained subject-specific parcels) were defined
-> by the MATLAB pipeline in the sibling `mriDataProcessing/` folder. This folder
+> by the MATLAB pipeline in the sibling `fMRI-data-processing/` folder. This folder
 > begins from the resulting per-subject fROI beta values (in `data/`).
 
 ---
@@ -24,10 +24,10 @@ and produce the manuscript's supplementary tables and figures.
    ```
 
 2. In **each** script you run, set the `workDir` variable at the top to the path
-   of this `statisticalAnalyses` folder. It is left blank on purpose:
+   of this `final-analyses` folder. It is left blank on purpose:
 
    ```r
-   workDir <- ''   # e.g. '~/Downloads/statisticalAnalyses/'
+   workDir <- ''   # e.g. '~/Downloads/final-analyses/'
    ```
 
    (`statistics_allfROIs_20260811.R` and `make_TableS1.R` expect a **trailing
@@ -41,7 +41,7 @@ All other paths (`data/`, `results/`, `plots/`) are derived from `workDir`.
 ## 2. Folder structure
 
 ```
-statisticalAnalyses/
+final-analyses/
 ├── code/
 │   ├── statistics_allfROIs_20260811.R   main analysis (run this first)
 │   ├── load_fROI_data.R                 helper: assembles the data frame (sourced by the others)
@@ -75,7 +75,8 @@ statisticalAnalyses/
 ## 4. Analysis notes
 
 - **Face-selective fROIs** are defined by a one-tailed test on the dynamic face
-  localizer: a region is "selective" when Faces significantly exceed fixation and
+  localizer: a region is "selective" when the response to Faces is significantly
+  greater than the response to fixation (i.e., baselime) and
   each of Bodies, Objects, Scenes, and Scrambled (all one-tailed p < .05).
 - **Planned contrasts** (Tables S5–S29) are estimated with linear mixed models
   (`lmer(betas ~ condition + (1|subject))`) and `emmeans` contrasts; p-values are
