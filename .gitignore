@@ -47,3 +47,12 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# MATLAB
+*.asv
+*.m~
+slprj/
+
+# Bash / shell
+*.log
+*.tmp
