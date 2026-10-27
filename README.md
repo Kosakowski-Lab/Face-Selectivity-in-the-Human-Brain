@@ -1,6 +1,6 @@
-# 31-Face-Selective-Regions
+# Face-Selectivity-in-the-Human-Brain
 
-## Face-selective regions and their responses across social tasks
+## Face-selective regions and their responses across social perceptual and cognitive tasks
 
 Code and data for the fMRI study of face-selective functional regions of interest
 (fROIs) and how they respond across a battery of social-perception and
